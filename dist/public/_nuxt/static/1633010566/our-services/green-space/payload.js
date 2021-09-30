@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/our-services/green-space", {data:[{}],fetch:{},mutations:void 0});

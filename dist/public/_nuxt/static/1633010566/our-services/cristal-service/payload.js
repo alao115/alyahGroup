@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/our-services/cristal-service", {data:[{}],fetch:{},mutations:void 0});
