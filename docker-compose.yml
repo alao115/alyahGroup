@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+
+  mongodb:
+    container_name: 'aads_mongodb'
+    image: "mongo"
+    volumes:
+      - '/data/db:/data/db'
+    ports:
+      - '27017:27017'
+
+  redis:
+    container_name: 'aads_redis'
+    image: 'redis'
+    ports:
+      - '6379:6379'
+
+  #api:
+  #  container_name: api
+  #  image: 'html/api_boilerplate'
+  #  volumes:
+  #    - '/home/anonymous/Documents/coding/Node/api_boilerplate:/home/api_boilerplate'
+  #  ports:
+  #    - '3000:3000'
+  #  depends_on:
+  #    - 'mongodb'
+  #    - 'redis'
+
+  mongoExpress:
+    container_name: 'aads_mongo_express'
+    image: 'mongo-express'
+    ports:
+      - '8081:8081'
+    environment:
+      # - 'ME_CONFIG_MONGODB_SERVER=mongodb'
+      - 'ME_CONFIG_MONGODB_SERVER=aads_mongodb'
