@@ -17,9 +17,9 @@ export default ({ app }) => {
   app.use('/api', routes());
 
   if (app.get('env') !== 'production') {
-    app.use(express.static(path.join(__dirname, '../public/')))
+    app.use(express.static(path.join(__dirname, '../public/')));
 
-    app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')))
+    app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')));
   }
 
   // catch 404 and forward to error handler

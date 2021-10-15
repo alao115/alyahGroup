@@ -9,7 +9,7 @@ exports.default = {
     frontend_url: process.env.FRONTEND_URL || 'http://localhost:8080',
     environment: process.env.APP_ENV || 'development',
     hostname: process.env.APP_HOSTNAME || '0.0.0.0',
-    port: process.env.APP_PORT,
+    port: process.env.APP_PORT || 4000,
     appName: process.env.APP_NAME || 'AADS Backend',
     logLevel: 'debug',
     db: process.env.DB_NAME || 'mongodb://localhost/aads',
